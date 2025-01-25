@@ -1,0 +1,90 @@
+{
+    "phpExtensions": [
+        {
+            "name": "xdebug",
+            "type": "debugging",
+            "description": "Debugger and profiler tool for PHP",
+            "versions": ["3.1.5", "3.2.0"],
+            "recommendedPhpVersions": ["7.4", "8.1", "8.2"],
+            "installCommands": {
+                "win32": "pecl install xdebug",
+                "darwin": "brew install php-xdebug",
+                "linux": "sudo pecl install xdebug"
+            },
+            "configTemplate": {
+                "zend_extension": "xdebug.so",
+                "xdebug.mode": "debug",
+                "xdebug.start_with_request": "yes"
+            }
+        },
+        {
+            "name": "redis",
+            "type": "cache",
+            "description": "Redis extension for PHP",
+            "versions": ["5.3.7", "6.0.2"],
+            "recommendedPhpVersions": ["7.4", "8.1", "8.2"],
+            "installCommands": {
+                "win32": "pecl install redis",
+                "darwin": "brew install php-redis",
+                "linux": "sudo pecl install redis"
+            },
+            "configTemplate": {
+                "extension": "redis.so",
+                "redis.connection.auth": "",
+                "redis.default_timeout": 30
+            }
+        },
+        {
+            "name": "mongodb",
+            "type": "database",
+            "description": "MongoDB driver for PHP",
+            "versions": ["1.14.2", "1.15.0"],
+            "recommendedPhpVersions": ["7.4", "8.1", "8.2"],
+            "installCommands": {
+                "win32": "pecl install mongodb",
+                "darwin": "brew install php-mongodb",
+                "linux": "sudo pecl install mongodb"
+            },
+            "configTemplate": {
+                "extension": "mongodb.so",
+                "mongodb.debug": 0
+            }
+        },
+        {
+            "name": "imagick",
+            "type": "graphics",
+            "description": "Image processing library",
+            "versions": ["3.7.0", "3.8.0"],
+            "recommendedPhpVersions": ["7.4", "8.1", "8.2"],
+            "installCommands": {
+                "win32": "pecl install imagick",
+                "darwin": "brew install php-imagick",
+                "linux": "sudo pecl install imagick"
+            },
+            "configTemplate": {
+                "extension": "imagick.so",
+                "imagick.locale_fix": 1
+            }
+        }
+    ],
+    "composerPackages": [
+        {
+            "name": "laravel/framework",
+            "type": "framework",
+            "description": "Laravel PHP Framework",
+            "recommendedPhpVersions": ["8.1", "8.2"],
+            "installCommand": "composer create-project --prefer-dist laravel/laravel"
+        },
+        {
+            "name": "symfony/framework-bundle",
+            "type": "framework", 
+            "description": "Symfony PHP Framework",
+            "recommendedPhpVersions": ["8.1", "8.2"],
+            "installCommand": "composer create-project symfony/skeleton"
+        }
+    ],
+    "metadata": {
+        "version": "1.0.0",
+        "lastUpdated": "2024-01-26"
+    }
+}

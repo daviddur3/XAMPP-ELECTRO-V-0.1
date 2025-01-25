@@ -1,0 +1,71 @@
+{
+    "databases": {
+        "mysql": {
+            "defaultCharset": "utf8mb4",
+            "defaultCollation": "utf8mb4_unicode_ci",
+            "defaultPort": 3306,
+            "authentication": {
+                "rootUser": "root",
+                "defaultPassword": ""
+            },
+            "configPaths": {
+                "win32": "C:\\MySQL\\my.ini",
+                "darwin": "/usr/local/mysql/my.cnf", 
+                "linux": "/etc/mysql/my.cnf"
+            },
+            "dataDirectories": {
+                "win32": "C:\\MySQL\\data",
+                "darwin": "/usr/local/mysql/data",
+                "linux": "/var/lib/mysql"
+            },
+            "recommendedVersions": [
+                "8.0.x",
+                "8.1.x"
+            ]
+        },
+        "postgresql": {
+            "defaultCharset": "UTF8",
+            "defaultPort": 5432,
+            "authentication": {
+                "rootUser": "postgres",
+                "defaultPassword": ""
+            },
+            "configPaths": {
+                "win32": "C:\\PostgreSQL\\data\\postgresql.conf",
+                "darwin": "/usr/local/pgsql/data/postgresql.conf",
+                "linux": "/etc/postgresql/main/postgresql.conf"
+            },
+            "dataDirectories": {
+                "win32": "C:\\PostgreSQL\\data",
+                "darwin": "/usr/local/pgsql/data", 
+                "linux": "/var/lib/postgresql"
+            },
+            "recommendedVersions": [
+                "14.x",
+                "15.x"
+            ]
+        }
+    },
+    "templates": {
+        "mysqlDatabase": {
+            "charset": "utf8mb4",
+            "collation": "utf8mb4_unicode_ci"
+        },
+        "postgresDatabase": {
+            "encoding": "UTF8",
+            "connectionLimit": 100
+        }
+    },
+    "defaultSettings": {
+        "maxConnections": 150,
+        "bufferPoolSize": "256M",
+        "queryCache": {
+            "type": "ON",
+            "size": "64M"
+        }
+    },
+    "metadata": {
+        "version": "1.0.0",
+        "lastUpdated": "2024-01-26"
+    }
+}

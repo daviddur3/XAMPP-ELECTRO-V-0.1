@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Services Manager</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web Services Manager</h1>
+        </header>
+
+        <section id="servicesContent">
+            <h2>Servicios</h2>
+            <div id="servicesList" class="grid-services">
+                <!-- Servicios generados dinámicamente -->
+            </div>
+        </section>
+
+        <section id="projectsContent">
+            <h2>Proyectos</h2>
+            <div class="project-selector">
+                <label for="projectPath">Directorio de Proyectos:</label>
+                <input type="text" id="projectPath" readonly placeholder="Selecciona un directorio de proyectos">
+                <button id="selectProjectDir">Seleccionar Directorio</button>
+            </div>
+
+            <div id="projectList">
+                <!-- Lista de proyectos -->
+            </div>
+        </section>
+
+        <section id="databaseContent">
+            <h2>Bases de Datos</h2>
+            <div id="databaseList">
+                <!-- Lista de bases de datos -->
+            </div>
+        </section>
+    </div>
+
+    <script src="js/renderer.js"></script>
+</body>
+</html>

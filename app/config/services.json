@@ -1,0 +1,113 @@
+{
+  "services": [
+    {
+      "id": "apache",
+      "name": "Apache",
+      "type": "webServer",
+      "version": "2.4.52",
+      "defaultPort": 80,
+      "status": "running",
+      "platforms": {
+        "win32": {
+          "binaryPath": "C:\\Apache\\bin\\httpd.exe",
+          "configPath": "C:\\Apache\\conf\\httpd.conf",
+          "startCommand": "net start Apache",
+          "stopCommand": "net stop Apache"
+        },
+        "darwin": {
+          "binaryPath": "/usr/local/apache/bin/httpd",
+          "configPath": "/usr/local/apache/conf/httpd.conf",
+          "startCommand": "sudo apachectl start",
+          "stopCommand": "sudo apachectl stop"
+        },
+        "linux": {
+          "binaryPath": "/usr/sbin/apache2",
+          "configPath": "/etc/apache2/apache2.conf",
+          "startCommand": "sudo systemctl start apache2",
+          "stopCommand": "sudo systemctl stop apache2"
+        }
+      },
+      "requiredPorts": [
+        80,
+        443
+      ],
+      "dependencies": [
+        "php"
+      ],
+      "recommendedVersion": "2.4.x"
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "type": "database",
+      "version": "8.0.27",
+      "defaultPort": 3306,
+      "status": "stopped",
+      "platforms": {
+        "win32": {
+          "binaryPath": "C:\\MySQL\\bin\\mysqld.exe",
+          "configPath": "C:\\MySQL\\my.ini",
+          "startCommand": "net start MySQL",
+          "stopCommand": "net stop MySQL"
+        },
+        "darwin": {
+          "binaryPath": "/usr/local/mysql/bin/mysqld",
+          "configPath": "/usr/local/mysql/my.cnf",
+          "startCommand": "sudo mysql.server start",
+          "stopCommand": "sudo mysql.server stop"
+        },
+        "linux": {
+          "binaryPath": "/usr/bin/mysqld",
+          "configPath": "/etc/mysql/my.cnf",
+          "startCommand": "sudo systemctl start mysql",
+          "stopCommand": "sudo systemctl stop mysql"
+        }
+      },
+      "requiredPorts": [
+        3306
+      ],
+      "dependencies": [],
+      "recommendedVersion": "8.0.x"
+    },
+    {
+      "id": "nginx",
+      "name": "Nginx",
+      "type": "webServer",
+      "version": "1.21.6",
+      "defaultPort": 80,
+      "status": "stopped",
+      "platforms": {
+        "win32": {
+          "binaryPath": "C:\\Nginx\\nginx.exe",
+          "configPath": "C:\\Nginx\\conf\\nginx.conf",
+          "startCommand": "start nginx",
+          "stopCommand": "nginx -s stop"
+        },
+        "darwin": {
+          "binaryPath": "/usr/local/nginx/sbin/nginx",
+          "configPath": "/usr/local/nginx/conf/nginx.conf",
+          "startCommand": "sudo nginx",
+          "stopCommand": "sudo nginx -s stop"
+        },
+        "linux": {
+          "binaryPath": "/usr/sbin/nginx",
+          "configPath": "/etc/nginx/nginx.conf",
+          "startCommand": "sudo systemctl start nginx",
+          "stopCommand": "sudo systemctl stop nginx"
+        }
+      },
+      "requiredPorts": [
+        80,
+        443
+      ],
+      "dependencies": [
+        "php"
+      ],
+      "recommendedVersion": "1.21.x"
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2024-01-26",
+    "version": "1.0.0"
+  }
+}

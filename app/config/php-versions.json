@@ -1,0 +1,113 @@
+{
+    "phpVersions": [
+        {
+            "version": "7.4",
+            "releaseDate": "2019-11-28",
+            "supportStatus": {
+                "securitySupport": "2023-11-28",
+                "communitySupport": "2024-11-28"
+            },
+            "binaryPaths": {
+                "win32": "C:\\PHP\\7.4\\php.exe",
+                "darwin": "/usr/local/php/7.4/bin/php",
+                "linux": "/usr/bin/php7.4"
+            },
+            "configPath": {
+                "win32": "C:\\PHP\\7.4\\php.ini",
+                "darwin": "/usr/local/php/7.4/etc/php.ini", 
+                "linux": "/etc/php/7.4/php.ini"
+            },
+            "extensions": [
+                "core",
+                "mysqli", 
+                "pdo",
+                "json",
+                "xml"
+            ],
+            "recommended": false
+        },
+        {
+            "version": "8.1",
+            "releaseDate": "2021-11-25",
+            "supportStatus": {
+                "securitySupport": "2024-11-25",
+                "communitySupport": "2025-11-25"
+            },
+            "binaryPaths": {
+                "win32": "C:\\PHP\\8.1\\php.exe", 
+                "darwin": "/usr/local/php/8.1/bin/php",
+                "linux": "/usr/bin/php8.1"
+            },
+            "configPath": {
+                "win32": "C:\\PHP\\8.1\\php.ini",
+                "darwin": "/usr/local/php/8.1/etc/php.ini",
+                "linux": "/etc/php/8.1/php.ini"
+            },
+            "extensions": [
+                "core",
+                "mysqli",
+                "pdo", 
+                "json",
+                "xml",
+                "curl",
+                "mbstring"
+            ],
+            "recommended": true
+        },
+        {
+            "version": "8.2",
+            "releaseDate": "2022-12-08", 
+            "supportStatus": {
+                "securitySupport": "2025-12-08",
+                "communitySupport": "2026-12-08"
+            },
+            "binaryPaths": {
+                "win32": "C:\\PHP\\8.2\\php.exe",
+                "darwin": "/usr/local/php/8.2/bin/php", 
+                "linux": "/usr/bin/php8.2"
+            },
+            "configPath": {
+                "win32": "C:\\PHP\\8.2\\php.ini",
+                "darwin": "/usr/local/php/8.2/etc/php.ini",
+                "linux": "/etc/php/8.2/php.ini"
+            },
+            "extensions": [
+                "core",
+                "mysqli",
+                "pdo",
+                "json", 
+                "xml",
+                "curl",
+                "mbstring",
+                "openssl"
+            ],
+            "recommended": false
+        }
+    ],
+    "availableExtensions": [
+        {
+            "name": "xdebug",
+            "description": "Debugger and profiler tool",
+            "versions": ["3.1.5", "3.2.0"]
+        },
+        {
+            "name": "redis",
+            "description": "Redis extension for PHP",
+            "versions": ["5.3.7", "6.0.2"]
+        },
+        {
+            "name": "mongodb",
+            "description": "MongoDB driver for PHP",
+            "versions": ["1.14.2", "1.15.0"]
+        },
+        {
+            "name": "imagick",
+            "description": "Image processing library",
+            "versions": ["3.7.0", "3.8.0"]
+        }
+    ],
+    "metadata": {
+        "lastUpdated": "2024-01-26",
+        "version": "1.0.0"
+    }
+}

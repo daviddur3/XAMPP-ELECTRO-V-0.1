@@ -1,0 +1,95 @@
+{
+    "logConfiguration": {
+        "globalSettings": {
+            "defaultLogLevel": "info",
+            "maxLogFileSize": "50MB",
+            "maxLogFiles": 10,
+            "rotationStrategy": "daily"
+        },
+        "logTypes": [
+            {
+                "name": "application",
+                "path": {
+                    "win32": "C:\\WebServicesManager\\logs\\app",
+                    "darwin": "/Applications/WebServicesManager/logs/app",
+                    "linux": "/opt/web-services-manager/logs/app"
+                },
+                "levels": [
+                    "debug",
+                    "info", 
+                    "warning",
+                    "error",
+                    "critical"
+                ]
+            },
+            {
+                "name": "services",
+                "path": {
+                    "win32": "C:\\WebServicesManager\\logs\\services",
+                    "darwin": "/Applications/WebServicesManager/logs/services", 
+                    "linux": "/opt/web-services-manager/logs/services"
+                },
+                "levels": [
+                    "start",
+                    "stop", 
+                    "restart",
+                    "status"
+                ]
+            },
+            {
+                "name": "database",
+                "path": {
+                    "win32": "C:\\WebServicesManager\\logs\\database",
+                    "darwin": "/Applications/WebServicesManager/logs/database",
+                    "linux": "/opt/web-services-manager/logs/database"
+                },
+                "levels": [
+                    "connection",
+                    "query", 
+                    "error",
+                    "performance"
+                ]
+            },
+            {
+                "name": "security",
+                "path": {
+                    "win32": "C:\\WebServicesManager\\logs\\security",
+                    "darwin": "/Applications/WebServicesManager/logs/security",
+                    "linux": "/opt/web-services-manager/logs/security"
+                },
+                "levels": [
+                    "login",
+                    "logout",
+                    "access_denied", 
+                    "password_change"
+                ]
+            }
+        ],
+        "logFormat": {
+            "timestamp": "ISO8601",
+            "fields": [
+                "timestamp",
+                "level", 
+                "message",
+                "service",
+                "pid"
+            ]
+        },
+        "retentionPolicy": {
+            "applicationLogs": 30,
+            "securityLogs": 90,
+            "serviceLogs": 60
+        },
+        "notificationSettings": {
+            "enableEmailAlerts": false,
+            "alertThresholds": {
+                "criticalErrors": 5,
+                "securityIncidents": 3
+            }
+        },
+        "metadata": {
+            "version": "1.0.0",
+            "lastUpdated": "2024-01-26"
+        }
+    }
+}

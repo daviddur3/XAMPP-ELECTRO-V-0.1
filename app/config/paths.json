@@ -1,0 +1,91 @@
+{
+    "platforms": {
+        "win32": {
+            "base": "C:\\WebServicesManager",
+            "www": {
+                "root": "C:\\WebServicesManager\\www",
+                "default": "C:\\WebServicesManager\\www\\default",
+                "projects": "C:\\WebServicesManager\\www\\projects"
+            },
+            "logs": {
+                "root": "C:\\WebServicesManager\\logs",
+                "apache": "C:\\WebServicesManager\\logs\\apache",
+                "mysql": "C:\\WebServicesManager\\logs\\mysql",
+                "nginx": "C:\\WebServicesManager\\logs\\nginx"
+            },
+            "configs": {
+                "root": "C:\\WebServicesManager\\configs",
+                "apache": "C:\\WebServicesManager\\configs\\apache",
+                "mysql": "C:\\WebServicesManager\\configs\\mysql",
+                "nginx": "C:\\WebServicesManager\\configs\\nginx"
+            },
+            "binaries": {
+                "apache": "C:\\Apache\\bin",
+                "mysql": "C:\\MySQL\\bin",
+                "nginx": "C:\\Nginx",
+                "php": "C:\\PHP"
+            }
+        },
+        "darwin": {
+            "base": "/Applications/WebServicesManager",
+            "www": {
+                "root": "/Applications/WebServicesManager/www",
+                "default": "/Applications/WebServicesManager/www/default",
+                "projects": "/Applications/WebServicesManager/www/projects"
+            },
+            "logs": {
+                "root": "/Applications/WebServicesManager/logs",
+                "apache": "/Applications/WebServicesManager/logs/apache",
+                "mysql": "/Applications/WebServicesManager/logs/mysql", 
+                "nginx": "/Applications/WebServicesManager/logs/nginx"
+            },
+            "configs": {
+                "root": "/Applications/WebServicesManager/configs",
+                "apache": "/Applications/WebServicesManager/configs/apache",
+                "mysql": "/Applications/WebServicesManager/configs/mysql",
+                "nginx": "/Applications/WebServicesManager/configs/nginx"
+            },
+            "binaries": {
+                "apache": "/usr/local/apache/bin",
+                "mysql": "/usr/local/mysql/bin",
+                "nginx": "/usr/local/nginx/sbin", 
+                "php": "/usr/local/php"
+            }
+        },
+        "linux": {
+            "base": "/opt/web-services-manager",
+            "www": {
+                "root": "/opt/web-services-manager/www",
+                "default": "/opt/web-services-manager/www/default",
+                "projects": "/opt/web-services-manager/www/projects"
+            },
+            "logs": {
+                "root": "/opt/web-services-manager/logs",
+                "apache": "/opt/web-services-manager/logs/apache",
+                "mysql": "/opt/web-services-manager/logs/mysql",
+                "nginx": "/opt/web-services-manager/logs/nginx"
+            },
+            "configs": {
+                "root": "/opt/web-services-manager/configs",
+                "apache": "/opt/web-services-manager/configs/apache",
+                "mysql": "/opt/web-services-manager/configs/mysql", 
+                "nginx": "/opt/web-services-manager/configs/nginx"
+            },
+            "binaries": {
+                "apache": "/usr/sbin",
+                "mysql": "/usr/bin",
+                "nginx": "/usr/sbin",
+                "php": "/usr/bin"
+            }
+        }
+    },
+    "commonPaths": {
+        "phpExtensions": "/etc/php/extensions",
+        "composerHome": "~/.composer",
+        "npmGlobal": "/usr/local/lib/node_modules"
+    },
+    "metadata": {
+        "version": "1.0.0",
+        "lastUpdated": "2024-01-26"
+    }
+}

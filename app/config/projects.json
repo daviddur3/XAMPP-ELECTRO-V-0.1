@@ -1,0 +1,98 @@
+{
+    "projectTypes": [
+        {
+            "id": "php_basic",
+            "name": "PHP Básico",
+            "description": "Proyecto PHP simple con estructura básica",
+            "defaultStructure": [
+                "index.php",
+                "css/",
+                "js/",
+                "includes/",
+                "README.md"
+            ],
+            "recommendedPhpVersions": ["7.4", "8.1"]
+        },
+        {
+            "id": "php_laravel",
+            "name": "Laravel Project",
+            "description": "Proyecto con framework Laravel",
+            "defaultStructure": [
+                "app/",
+                "bootstrap/",
+                "config/",
+                "database/",
+                "public/",
+                "resources/",
+                "routes/",
+                "storage/",
+                "tests/",
+                "composer.json"
+            ],
+            "recommendedPhpVersions": ["8.1", "8.2"],
+            "requiredComposerPackages": [
+                "laravel/framework"
+            ]
+        },
+        {
+            "id": "php_symfony",
+            "name": "Symfony Project", 
+            "description": "Proyecto con framework Symfony",
+            "defaultStructure": [
+                "config/",
+                "public/",
+                "src/",
+                "templates/",
+                "var/",
+                "vendor/",
+                "composer.json"
+            ],
+            "recommendedPhpVersions": ["8.1", "8.2"],
+            "requiredComposerPackages": [
+                "symfony/framework-bundle"
+            ]
+        },
+        {
+            "id": "static_html",
+            "name": "Sitio Web Estático",
+            "description": "Proyecto HTML/CSS/JavaScript",
+            "defaultStructure": [
+                "index.html",
+                "css/",
+                "js/",
+                "img/",
+                "README.md"
+            ],
+            "recommendedPhpVersions": []
+        }
+    ],
+    "projectDefaults": {
+        "wwwPath": {
+            "win32": "C:\\WebServicesManager\\www\\projects",
+            "darwin": "/Applications/WebServicesManager/www/projects",
+            "linux": "/opt/web-services-manager/www/projects"
+        },
+        "maxProjects": 50,
+        "allowedFileTypes": [
+            ".php", 
+            ".html", 
+            ".css", 
+            ".js", 
+            ".json", 
+            ".md", 
+            ".txt"
+        ]
+    },
+    "virtualHostTemplates": {
+        "apache": {
+            "default": "<VirtualHost *:80>\n    ServerName {{DOMAIN}}\n    DocumentRoot \"{{PATH}}\"\n    <Directory \"{{PATH}}\">\n        Options Indexes FollowSymLinks\n        AllowOverride All\n        Require all granted\n    </Directory>\n</VirtualHost>"
+        },
+        "nginx": {
+            "default": "server {\n    listen 80;\n    server_name {{DOMAIN}};\n    root {{PATH}};\n    index index.php index.html;\n}"
+        }
+    },
+    "metadata": {
+        "version": "1.0.0",
+        "lastUpdated": "2024-01-26"
+    }
+}

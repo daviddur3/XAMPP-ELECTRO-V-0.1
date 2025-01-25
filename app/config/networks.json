@@ -1,0 +1,47 @@
+{
+    "networkServices": {
+        "ports": {
+            "webServers": [
+                {"port": 80, "protocol": "HTTP", "description": "Default web traffic"},
+                {"port": 443, "protocol": "HTTPS", "description": "Secure web traffic"}
+            ],
+            "databases": [
+                {"port": 3306, "protocol": "TCP", "service": "MySQL", "description": "MySQL default port"},
+                {"port": 5432, "protocol": "TCP", "service": "PostgreSQL", "description": "PostgreSQL default port"}
+            ],
+            "development": [
+                {"port": 3000, "protocol": "TCP", "description": "Node.js development server"},
+                {"port": 8080, "protocol": "TCP", "description": "Alternative web server port"}
+            ]
+        },
+        "localHosts": {
+            "default": "127.0.0.1",
+            "ipv6Localhost": "::1"
+        },
+        "defaultNetworkInterfaces": {
+            "win32": {
+                "ethernet": "Ethernet",
+                "wifi": "Wi-Fi"
+            },
+            "darwin": {
+                "ethernet": "en0",
+                "wifi": "en1"
+            },
+            "linux": {
+                "ethernet": "eth0", 
+                "wifi": "wlan0"
+            }
+        },
+        "networkProtocols": [
+            "HTTP",
+            "HTTPS", 
+            "FTP",
+            "SSH",
+            "SMTP"
+        ],
+        "metadata": {
+            "version": "1.0.0",
+            "lastUpdated": "2024-01-26"
+        }
+    }
+}
